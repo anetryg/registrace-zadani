@@ -18,7 +18,9 @@ const Registration = () => {
         if(user.email == "" || user.password == "" || user.passwordConfirm == "") throw alert("form is not valid");
         if(user.password !== user.passwordConfirm) throw alert("passwords do not match");
         if(user.email.indexOf('@') <= -1) throw alert("email is not valid");
-
+        else{
+            alert("sent successfully")
+        }
       };
 
       console.log(user);
@@ -44,13 +46,13 @@ const Registration = () => {
     <FormGroup>
         <Title>registration</Title>
         <Label>username</Label>
-        <input name="user name" type="text" onChange={handleChange} /><br></br>
+        <input name="user name" type="text" onChange={handleChange} value={user.username} /><br></br>
         <Label>email</Label>
-        <input name="email" type="email" onChange={handleChange} onBlur={handleEmailToUsername}/><br></br>
+        <input name="email" type="email" onChange={handleChange} onBlur={handleEmailToUsername} value={user.email}/><br></br>
         <Label>password</Label>
-        <input name="password" type="password" onChange={handleChange} /><br></br>
+        <input name="password" type="password" onChange={handleChange} value={user.password} /><br></br>
         <Label>password confirm</Label>
-        <input name="passwordConfirm" type="password" onChange={handleChange} /><br></br>
+        <input name="passwordConfirm" type="password" onChange={handleChange} value={user.passwordConfirm}/><br></br>
         <Button onClick={handleLogin} type="submit">register</Button>
     </FormGroup>
     </Rectangle>
