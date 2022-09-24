@@ -19,9 +19,6 @@ const Registration = () => {
         if(user.password !== user.passwordConfirm) throw alert("passwords do not match");
         if(user.email.indexOf('@') <= -1) throw alert("email is not valid");
 
-        const splitEmail = user.email.split("@")[0]
-        if(user.username == "" || user.email.includes("@")) setUser({...user, username: splitEmail})        
-
       };
 
       console.log(user);
@@ -30,6 +27,13 @@ const Registration = () => {
     const handleChange = event => {
         setUser({...user, [event.target.name]: event.target.value})
         }
+
+    const handleEmailToUsername = () =>{
+        if (user.email.includes("@")){
+            const splitEmail = user.email.split("@")[0]
+            if(user.username == "" || user.email.includes("@")) setUser({...user, username: splitEmail})  
+        }
+    }
 
     
     return (
@@ -42,7 +46,7 @@ const Registration = () => {
         <Label>username</Label>
         <input name="user name" type="text" onChange={handleChange} /><br></br>
         <Label>email</Label>
-        <input name="email" type="text" onChange={handleChange} /><br></br>
+        <input name="email" type="email" onChange={handleChange} onBlur={handleEmailToUsername}/><br></br>
         <Label>password</Label>
         <input name="password" type="password" onChange={handleChange} /><br></br>
         <Label>password confirm</Label>
