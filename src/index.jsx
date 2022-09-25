@@ -1,7 +1,7 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import './style.css';
-import Registration from "./components/Registration"
+import React from "react";
+import { createRoot } from "react-dom/client";
+import "./style.css";
+import Registration from "./components/Registration";
 
 const App = () => {
   return (
@@ -11,6 +11,4 @@ const App = () => {
   );
 };
 
-createRoot(
-  document.querySelector('#app'),
-).render(<App />);
+createRoot(document.querySelector("#app")).render(<App />);

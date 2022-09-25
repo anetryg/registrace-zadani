@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
   body {
@@ -29,28 +29,24 @@ export const Button = styled.button`
 export const Rectangle = styled.div`
   height: 400px;
   width: 250px;
-  background-color: 	
-  #554A55;
+  background-color: #554a55;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-	margin: 50px auto;
+  margin: 50px auto;
   border-radius: 5px;
 `;
 
 export const FormGroup = styled.div`
-	color: palevioletred;
+  color: palevioletred;
   display: block;
-	width: 300px;
-	margin: 50px auto;
-  
+  width: 300px;
+  margin: 50px auto;
 `;
 
 export const Label = styled.label`
-	margin-bottom: 0.5em;
-	color: palevioletred;
+  margin-bottom: 0.5em;
+  color: palevioletred;
   display: block;
 `;
-
-
