@@ -18,13 +18,14 @@ const Registration = () => {
 
   const handleLogin = (event) => {
     event.preventDefault();
-    if (user.email == "" || user.password == "" || user.passwordConfirm == "")
-      throw alert("form is not valid");
+    if (!user.email || !user.password || !user.passwordConfirm)
+      return alert("form is not valid");
     if (user.password !== user.passwordConfirm)
-      throw alert("passwords do not match");
-    if (user.email.indexOf("@") <= -1) throw alert("email is not valid");
+      return alert("passwords do not match");
+    if (user.email.indexOf("@") <= -1) 
+      return alert("email is not valid");
     else {
-      alert("sent successfully");
+      return alert("sent successfully");
     }
   };
 
