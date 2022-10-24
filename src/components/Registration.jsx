@@ -51,7 +51,7 @@ const Registration = () => {
           <Title>registration</Title>
           <Label>username</Label>
           <input
-            name="user name"
+            name="username"
             type="text"
             onChange={handleChange}
             value={user.username}
