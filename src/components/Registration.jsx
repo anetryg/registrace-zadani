@@ -36,7 +36,7 @@ const Registration = () => {
   };
 
   const handleEmailToUsername = () => {
-    if (user.email.includes("@")) {
+    if (user.email.includes("@") && user.username === "") {
       const splitEmail = user.email.split("@")[0];
       if (user.username == "" || user.email.includes("@"))
         setUser({ ...user, username: splitEmail });
